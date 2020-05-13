@@ -11,7 +11,7 @@ namespace LukeBrowne_S00187306
     #region Properties
 
     public string Name { get; set; }
-    public decimal Price { get; set; }
+    public double Price { get; set; }
     public string OperatingSystem { get; set; }
     public string OS_Image { get; set; }
     public string Phone_Image { get; set; }
@@ -19,7 +19,7 @@ namespace LukeBrowne_S00187306
     #endregion Properties
 
     #region Constructors
-    public Phone(string name, decimal price, string operatingSystem, string os_Image, string phone_Image)
+    public Phone(string name, double price, string operatingSystem, string os_Image, string phone_Image)
     {
       Name = name;
       Price = price;
@@ -29,9 +29,12 @@ namespace LukeBrowne_S00187306
     }
     #endregion Constructors
 
-    public void IncreasePrice(decimal percentage)
+
+    public static double IncreasePrice(double percentage, double Price)
     {
-      Price = Price * percentage;
+      Price = Price + (Price * percentage);
+
+      return Price;
     }
   }
 }
