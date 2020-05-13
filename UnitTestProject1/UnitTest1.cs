@@ -11,16 +11,16 @@ namespace UnitTestProject1
     public void TestIncreasePriceMethod()
     {
       // arrange
-      double increasedPrice;
+      decimal increasedPrice;
 
-      double priceToIncrease = 100;
-      double percentageIncrease = 0.1;
+      decimal priceToIncrease = 100; // 100 x 10% = 110
+      decimal percentageIncrease = 0.1M;
 
       // act
       increasedPrice = Phone.IncreasePrice(percentageIncrease, priceToIncrease);
 
       // assert
-      Assert.That.Equals(110);
+      Assert.That.Equals(110); // this is the 110
 
     }
   }

@@ -5,10 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LukeBrowne_S00187306"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}">
   <Grid>
-    <ListBox x:Name="lbxPhones1" HorizontalAlignment="Left" Height="400" VerticalAlignment="Top" Width="250" Margin="10"/>
-    <TextBlock x:Name="textPrice" TextWrapping="Wrap" Text="yeet" Margin="490,10,50,350" FontSize="36" TextAlignment="Center"/>
+    <ListBox x:Name="lbxPhones" HorizontalAlignment="Left" Height="380" VerticalAlignment="Top" Width="250" Margin="10" FontSize="24" SelectionChanged="LbxPhones_SelectionChanged"/>
+    <TextBlock x:Name="textPrice" TextWrapping="Wrap" Margin="490,10,50,350" FontSize="36" TextAlignment="Center"/>
     <Image x:Name="phoneImg" HorizontalAlignment="Left" Height="307" Margin="450,100,0,0" VerticalAlignment="Top" Width="334"/>
   </Grid>
 </Window>
